@@ -1,14 +1,13 @@
 var supertest = require('supertest');
 var app = require('../server.js');
 var User = require('../lib/dbmodels/user');
-var intercom = require(global.lib_path+'/intercomapi');
 
 // Test User Object
 var userData = {
-  username: "mochatest",
-  email: "mocha@mongofort.com",
+  username: "testuser",
+  email: "user@testuser.com",
   password: "Sup3rTe5t!",
-  name: "Randal McDonglefish"
+  name: "Test Userson"
 };
 
 describe('User Functions', function() {
@@ -16,7 +15,6 @@ describe('User Functions', function() {
   // Remove the test user from mongo database after all tests have run.
   after(function() {
     User.find({ username: userData.username }).remove().exec();
-    intercom.deleteUser({ email: userData.email });
   });
 
   describe('CreateUser', function() {

@@ -4,10 +4,10 @@ var User = require(global.lib_path+'/dbmodels/user');
 
 // Test User Object
 var userData = {
-  username: "mochatest",
-  email: "mocha@mongofort.com",
+  username: "testuser",
+  email: "user@testuser.com",
   password: "Sup3rTe5t!",
-  name: "Randal McDonglefish"
+  name: "Test Userson"
 };
 
 describe('Routing With Auth', function() {
@@ -32,6 +32,10 @@ describe('Routing With Auth', function() {
     User.find({ username: userData.username }).remove().exec();
   });
 
+  /*
+
+  Edit for specific app routes. 
+
   describe('Manager Page with Active cookie', function() {
     it('Should respond with 200', function(done) {
       agent
@@ -47,4 +51,5 @@ describe('Routing With Auth', function() {
        .expect(302, done);
     });
   });
+  */
 });
