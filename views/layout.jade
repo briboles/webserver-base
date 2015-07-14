@@ -1,0 +1,53 @@
+doctype
+html
+  head
+    title #{title} 
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    link(rel='stylesheet', href='css/custom.css')
+    link(rel='icon' href='/favicon.ico' type='imatge/x-icon')
+  body
+    //
+      nav(class='navbar navbar-inverse navbar-fixed-top')
+        .container-fluid
+          .navbar-header
+            button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expaned="false" aria-controls="navbar")
+            
+          #navbar(class='collapse navbar-collapse')
+
+            ul(class='nav navbar-nav navbar-right' )
+              form(class="form navbar-form " role="form" name="login" action="/login" method="post" style="margin-bottom: -5px;")
+                
+                  .form-group
+                    input.white(style="width:140px", type="text", name="username",placeholder="Username")
+                  .form-group
+                    input.white(style="width:140px", type="password", name="password",placeholder="Password")
+                  .form-group( style="margin-top: -9px; margin-left: 1px;")
+                    button(style="width:140px", aria-controls="nav-collapse2") Login
+
+    .container-fluid
+      .row(style="padding-top:0px")
+        block content
+
+      .row
+        block content2
+
+      .row
+        block content3
+      
+        block sidebar
+
+      #footer.footer
+        .container-fluid
+          .row
+            .col-sm-12(style='text-align:center;')
+              .footer-panel
+                span
+                | Icons made by 
+                a(href='http://www.flaticon.com/authors/freepik', title='Freepik') Freepik
+                |  from 
+                a(href='http://www.flaticon.com', title='Flaticon') www.flaticon.com
+                |  is licensed by 
+                a(href='http://creativecommons.org/licenses/by/3.0/', title='Creative Commons BY 3.0') CC BY 3.0
+        script(src="https://code.jquery.com/jquery-2.1.4.min.js")
+        script(src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js")
+          

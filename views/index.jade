@@ -1,0 +1,57 @@
+extend layout
+block content
+  .wrapper
+    .custom-container
+      h1.white
+        | MongoDB Cloud Hosting Services
+        br
+        small.white Host MongoDB Projects on MongoFort.com. Add email to receive alerts.
+      form.form(action="/fastsignup" method="POST") 
+        input.white(name="email" type='text', placeholder='Email')
+        button#login-button(type='submit') Sign Up 
+    ul.bg-bubbles
+      li
+      li
+      li
+      li
+      li
+      li
+      li
+      li
+      li
+      li
+
+block content2
+  div.linebreak.mongogreen
+  .largebreak
+  div(class="container-fluid" style="color: black;")
+    .col-md-4
+      div.row.text-center
+        h2 
+          span
+            img(src="images/performance.png")
+          span(style="margin-left: 10px") Performance
+      .row
+        .col-sm-1 
+        p.col-sm-10.text-center MongoFort’s cloud dedicated MongoDB servers are purposefully built and tuned for running Mongo databases. SSD storage and optimized network performance mean your data is written, stored, and retrieved fast.
+    .col-md-4
+      div.row.text-center
+        h2
+          span
+            img(src="images/easy.png")
+          span(style="margin-left: 10px") Ease of Use
+      div.row.text-center
+        .col-sm-1
+        p.col-sm-10 MongoFort makes it easy to work with your MongoDB instance. A clear and simple pricing model, and a clean interface designed for speed and usability allow you to get your work done quickly and effortlessly.
+    .col-md-4
+      div.row.text-center
+        h2
+          span
+            img(src="images/scalable.png")
+          span(style="margin-left: 10px") Scalability
+      .row
+        .col-sm-1
+        p.col-sm-10.text-center MongoFort has plans of all sizes coming soon. Whether you are just getting started and learning Mongo for the first time or already running enterprise applications in a large environment, MongoFort can help you store your data safely, and expand as your needs grow.
+
+block content3
+  div.class-fluid.detailblock(style="height:400px")

@@ -1,0 +1,12 @@
+extend layout
+block content
+  .col-md-6.col-md-offset-3
+    h1 Login
+      form(name="login", action="/login", method="post")
+        .form-group
+          input.form-control(type="text", name="username",placeholder="Username")
+        .form-group
+          input.form-control(type="password", name="password",placeholder="Password")
+        button.btn.btn-primary(type='submit') Submit
+        a.btn.btn-default.pull-right(href='/signup') Create Account
+        .form-group

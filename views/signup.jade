@@ -1,0 +1,20 @@
+extend layout
+block content
+  .col-sm-4
+  .col-sm-4
+    h1.text-center Sign up for an Account!
+    form(action="/signup" method="post")
+      .form-group
+        label(for='name') Name
+        input#name.form-control(type='text', placeholder='Jon Mongoington',name="name")      
+      .form-group
+        label(for='exampleInputEmail1') Email Address
+        input#exampleInputEmail1.form-control(type='email', placeholder='Email Address',name="email")
+      .form-group
+        label(for='exampleInputUser1') Username 
+        input#exampleInputUser1.form-control(type='text', placeholder='Username',name="username")
+      .form-group
+        label(for='exampleInputPassword1') Password
+        input#exampleInputPassword1.form-control(type='password', placeholder='Password',name="password")
+      button.btn.btn-success(type='submit') Submit 
+      
